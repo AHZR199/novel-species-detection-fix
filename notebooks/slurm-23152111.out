@@ -1,0 +1,169 @@
+{'DATA_CSV_PATH': 'data/finale/datasplit_fold5.csv',
+ 'False_additions': False,
+ 'alpha': 0.99,
+ 'ann_start': 0.7,
+ 'augment_prob': 0.001,
+ 'batch_size': 16,
+ 'blend_params': {'alpha': 1.0,
+                  'blend_type': 'cut',
+                  'fixed_proba': 0,
+                  'grid': True,
+                  'same_crop': False,
+                  'same_image': False,
+                  'same_size': False,
+                  'size': 0.15},
+ 'class_map': [(0, 'aedes aedes_aegypti'),
+               (1, 'aedes aedes_albopictus'),
+               (2, 'aedes aedes_dorsalis'),
+               (3, 'aedes aedes_sollicitans'),
+               (4, 'aedes aedes_taeniorhynchus'),
+               (5, 'aedes aedes_vexans'),
+               (6, 'anopheles anopheles_coustani'),
+               (7, 'anopheles anopheles_freeborni'),
+               (8, 'anopheles anopheles_funestus'),
+               (9, 'anopheles anopheles_gambiae'),
+               (10, 'anopheles anopheles_punctipennis'),
+               (11, 'anopheles anopheles_quadrimaculatus'),
+               (12, 'culex culex_pipiens_sl'),
+               (13, 'culex culex_salinarius'),
+               (14, 'psorophora psorophora_columbiae'),
+               (15, 'psorophora psorophora_cyanescens'),
+               (16, 'aedes aedes_spp'),
+               (17, 'anopheles anopheles_spp'),
+               (18, 'culex culex_spp'),
+               (19, 'psorophora psorophora_spp'),
+               (20, 'mosquito')],
+ 'cosine_annealing': False,
+ 'debug': False,
+ 'desc': 'open classification',
+ 'drop_rate': 0,
+ 'dump': 0,
+ 'epochs': 60,
+ 'eps': 1e-06,
+ 'exp_name': 'next_experiment',
+ 'fastai_data': False,
+ 'fp16': False,
+ 'genus': False,
+ 'gpu': None,
+ 'imsize': 299,
+ 'known_only': False,
+ 'log_file': './logs/next_experiment',
+ 'loss_dict': {'FocalLoss': {'gamma': 0, 'mag_scale': 1.0, 'weight': 1.0}},
+ 'lr': 0.01,
+ 'lr_finetune': 0.0001,
+ 'lrfinder': False,
+ 'mixup': 0.4,
+ 'model_name': 'xception',
+ 'mom': 0.9,
+ 'num_species': array([21]),
+ 'num_workers': 40,
+ 'one_hot_labels': False,
+ 'optimizer': 'ranger',
+ 'phone_additions': False,
+ 'preload_data': False,
+ 'pretrained': True,
+ 'ricap': 0,
+ 'sched_type': 'one_cycle',
+ 'swa': False,
+ 'unknown_classes': [16, 17, 18, 19, 20],
+ 'wandb': True,
+ 'wandb_project': 'Vectech Classification - Network of Experts',
+ 'weight_decay': 0.01}
+/work/soghigian_lab/abdullah.zubair/novel-species-detection
+0 :  aedes_aegypti
+1 :  aedes_albopictus
+2 :  aedes_dorsalis
+3 :  aedes_sollicitans
+4 :  aedes_taeniorhynchus
+5 :  aedes_vexans
+6 :  anopheles_coustani
+7 :  anopheles_freeborni
+8 :  anopheles_funestus
+9 :  anopheles_gambiae
+10 :  anopheles_punctipennis
+11 :  anopheles_quadrimaculatus
+12 :  culex_pipiens_sl
+13 :  culex_salinarius
+14 :  psorophora_columbiae
+15 :  psorophora_cyanescens
+16 :  aedes_spp
+17 :  anopheles_spp
+18 :  culex_spp
+19 :  psorophora_spp
+20 :  mosquito
+21
+Using Xception with 21 classes
+Loading pretrained weights...
+Reading data split from data/finale/datasplit_fold5.csv
+Data Augmemtation with probability  0.001
+Train dataset size = 7395
+Focal Loss with gamma =  0
+Training ...
+Saving to  /work/soghigian_lab/abdullah.zubair/novel-species-detection/model_weights/next_experiment/best_xception.pth
+█epoch     train_loss  valid_loss  accuracy  macro_f1  time    
+█/home/abdullah.zubair/miniconda3/envs/model4/lib/python3.7/site-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (2.0.5) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+█0         2.203815    1.823191    0.636905  0.440123  01:38     
+██1         1.452562    1.234540    0.755952  0.533100  01:19     
+██2         1.051749    0.962753    0.812169  0.546698  01:19     
+██3         0.889585    0.919332    0.823413  0.586202  01:18     
+██4         0.766012    0.798015    0.843254  0.561711  01:19     
+██5         0.645822    0.868283    0.833333  0.578553  01:18     
+██6         0.684763    0.751411    0.861111  0.626139  01:19     
+██7         0.687825    0.857971    0.839286  0.618350  01:19     
+██8         0.711908    0.797814    0.859127  0.633532  01:19     
+██9         0.637971    0.851797    0.847884  0.625066  01:18     
+██10        0.670153    0.822617    0.861111  0.653264  01:19     
+██11        0.627987    0.833576    0.852513  0.613339  01:19     
+██12        0.635449    0.920593    0.830688  0.569318  01:19     
+██13        0.648331    0.803768    0.864418  0.644657  01:19     
+██14        0.696676    0.871761    0.844577  0.583583  01:19     
+██15        0.509394    0.923665    0.832011  0.568500  01:19     
+██16        0.549049    0.737324    0.868386  0.606891  01:19     
+██17        0.564976    0.834763    0.855159  0.628247  01:19     
+██18        0.498998    0.859523    0.845899  0.612264  01:19     
+██19        0.442482    0.772954    0.876984  0.665580  01:20     
+██20        0.402415    0.762785    0.869709  0.661993  01:19     
+██21        0.321032    0.732420    0.880291  0.664917  01:20     
+██22        0.403473    0.674626    0.887566  0.687817  01:19     
+██23        0.375224    0.685536    0.886243  0.642115  01:19     
+██24        0.410891    0.725552    0.873677  0.636620  01:19     
+██25        0.299318    0.787794    0.869048  0.628862  01:19     
+██26        0.378946    0.708439    0.888889  0.646138  01:19     
+██27        0.287580    0.712489    0.884921  0.696327  01:19     
+██28        0.299664    0.812765    0.867063  0.619694  01:19     
+██29        0.241120    0.604636    0.894841  0.709196  01:19     
+██30        0.237032    0.652535    0.886905  0.654256  01:19     
+██31        0.203892    0.630017    0.892196  0.685725  01:19     
+██32        0.202342    0.663374    0.896164  0.676816  01:19     
+██33        0.211394    0.765271    0.875661  0.664261  01:19     
+██34        0.210256    0.599621    0.902116  0.734063  01:19     
+██35        0.129887    0.819596    0.886243  0.677840  01:19     
+██36        0.147008    0.622861    0.899471  0.679295  01:19     
+██37        0.119713    0.593567    0.910714  0.715501  01:20     
+██38        0.103077    0.630188    0.908069  0.692266  01:19     
+██39        0.090599    0.605744    0.912037  0.756151  01:19     
+██40        0.079954    0.526609    0.921958  0.751323  01:19     
+██41        0.106148    0.563671    0.922619  0.775221  01:19     
+██42        0.062733    0.507955    0.916667  0.754489  01:19     
+██43        0.067880    0.600732    0.917328  0.754976  01:19     
+██44        0.058133    0.525032    0.921958  0.761930  01:20     
+██45        0.036621    0.518630    0.925926  0.782673  01:20     
+██46        0.046577    0.603854    0.912698  0.740162  01:19     
+██47        0.048263    0.513985    0.929233  0.771527  01:19     
+██48        0.036724    0.490568    0.927910  0.762790  01:19     
+██49        0.033839    0.515017    0.929894  0.783974  01:19     
+██50        0.024069    0.498694    0.929894  0.780202  01:19     
+██51        0.032471    0.514237    0.931217  0.795298  01:19     
+██52        0.028954    0.473447    0.933201  0.787939  01:19     
+██53        0.026602    0.479768    0.935185  0.800336  01:19     
+██54        0.012936    0.473620    0.936508  0.785904  01:19     
+██55        0.018837    0.477113    0.933201  0.778486  01:19     
+██56        0.030274    0.482510    0.935185  0.779191  01:19     
+██57        0.033947    0.481310    0.936508  0.799285  01:19     
+██58        0.022902    0.498936    0.934524  0.789038  01:19     
+██59        0.025533    0.470634    0.933862  0.796223  01:19     
+Traceback (most recent call last):
+  File "classification-explore.py", line 198, in <module>
+    from configs.old_configs.paper_redo.fold4.config import config
+ModuleNotFoundError: No module named 'configs.old_configs.paper_redo.fold4'

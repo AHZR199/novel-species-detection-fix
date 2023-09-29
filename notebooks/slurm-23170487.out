@@ -1,0 +1,111 @@
+{'DATA_CSV_PATH': 'data/finale/datasplit_fold5.csv',
+ 'False_additions': False,
+ 'alpha': 0.99,
+ 'ann_start': 0.7,
+ 'augment_prob': 0.001,
+ 'batch_size': 16,
+ 'blend_params': {'alpha': 1.0,
+                  'blend_type': 'cut',
+                  'fixed_proba': 0,
+                  'grid': True,
+                  'same_crop': False,
+                  'same_image': False,
+                  'same_size': False,
+                  'size': 0.15},
+ 'class_map': [(0, 'aedes aedes_aegypti'),
+               (1, 'aedes aedes_albopictus'),
+               (2, 'aedes aedes_dorsalis'),
+               (3, 'aedes aedes_sollicitans'),
+               (4, 'aedes aedes_taeniorhynchus'),
+               (5, 'aedes aedes_vexans'),
+               (6, 'anopheles anopheles_coustani'),
+               (7, 'anopheles anopheles_freeborni'),
+               (8, 'anopheles anopheles_funestus'),
+               (9, 'anopheles anopheles_gambiae'),
+               (10, 'anopheles anopheles_punctipennis'),
+               (11, 'anopheles anopheles_quadrimaculatus'),
+               (12, 'culex culex_pipiens_sl'),
+               (13, 'culex culex_salinarius'),
+               (14, 'psorophora psorophora_columbiae'),
+               (15, 'psorophora psorophora_cyanescens'),
+               (16, 'aedes aedes_spp'),
+               (17, 'anopheles anopheles_spp'),
+               (18, 'culex culex_spp'),
+               (19, 'psorophora psorophora_spp'),
+               (20, 'mosquito')],
+ 'cosine_annealing': False,
+ 'debug': False,
+ 'desc': 'open classification',
+ 'drop_rate': 0,
+ 'dump': 0,
+ 'epochs': 60,
+ 'eps': 1e-06,
+ 'exp_name': 'next_experiment',
+ 'fastai_data': False,
+ 'fp16': False,
+ 'genus': False,
+ 'gpu': None,
+ 'imsize': 299,
+ 'known_only': False,
+ 'log_file': './logs/next_experiment',
+ 'loss_dict': {'FocalLoss': {'gamma': 0, 'mag_scale': 1.0, 'weight': 1.0}},
+ 'lr': 0.01,
+ 'lr_finetune': 0.0001,
+ 'lrfinder': False,
+ 'mixup': 0.4,
+ 'model_name': 'xception',
+ 'mom': 0.9,
+ 'num_species': array([21]),
+ 'num_workers': 80,
+ 'one_hot_labels': False,
+ 'optimizer': 'ranger',
+ 'phone_additions': False,
+ 'preload_data': False,
+ 'pretrained': True,
+ 'ricap': 0,
+ 'sched_type': 'one_cycle',
+ 'swa': False,
+ 'unknown_classes': [16, 17, 18, 19, 20],
+ 'wandb': True,
+ 'wandb_project': 'Vectech Classification - Network of Experts',
+ 'weight_decay': 0.01}
+/work/soghigian_lab/abdullah.zubair/novel-species-detection
+0 :  aedes_aegypti
+1 :  aedes_albopictus
+2 :  aedes_dorsalis
+3 :  aedes_sollicitans
+4 :  aedes_taeniorhynchus
+5 :  aedes_vexans
+6 :  anopheles_coustani
+7 :  anopheles_freeborni
+8 :  anopheles_funestus
+9 :  anopheles_gambiae
+10 :  anopheles_punctipennis
+11 :  anopheles_quadrimaculatus
+12 :  culex_pipiens_sl
+13 :  culex_salinarius
+14 :  psorophora_columbiae
+15 :  psorophora_cyanescens
+16 :  aedes_spp
+17 :  anopheles_spp
+18 :  culex_spp
+19 :  psorophora_spp
+20 :  mosquito
+21
+Using Xception with 21 classes
+Loading pretrained weights...
+Reading data split from data/finale/datasplit_fold5.csv
+Data Augmemtation with probability  0.001
+Train dataset size = 7395
+Focal Loss with gamma =  0
+Training ...
+Saving to  /work/soghigian_lab/abdullah.zubair/novel-species-detection/model_weights/next_experiment/best_xception.pth
+█epoch     train_loss  valid_loss  accuracy  macro_f1  time    
+█/home/abdullah.zubair/miniconda3/envs/model4/lib/python3.7/site-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (2.0.5) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+█0         2.231189    1.906578    0.623677  0.417252  01:47     
+██1         1.380489    1.263588    0.751323  0.510194  01:28     
+██2         1.059680    0.965193    0.825397  0.579028  01:28     
+██3         0.882784    0.921081    0.821429  0.585905  01:28     
+██4         0.733340    0.773964    0.855159  0.599602  01:28     
+█slurmstepd: error: *** JOB 23170487 ON fg2 CANCELLED AT 2023-09-29T13:36:45 ***
